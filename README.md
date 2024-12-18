@@ -31,12 +31,13 @@ jobs:
 ```
 
 
-### Required Environment Variables
+### Environment Variables
 
-| Key | Value | Type | Required |
+| Key | Value | Required | Default |
 | ------------- | ------------- | ------------- | ------------- |
-| `SOURCE_DIR` | The local directory you wish to sync/upload to B2. For example, `./public`. | `env` | **Yes** |
-
+| `SOURCE_DIR` | The local directory you wish to sync/upload to B2. For example, `./public`. | **Yes** | N/A |
+| `B2_SYNC_DELETE` | Flag to determine whether to delete files in the bucket that are not present in the source directory. <br/> Can be set to `true` or `false`. | **No** | `true` |
+| `B2_SYNC_REPLACE_NEWER` | Flag to determine whether to replace files in the bucket with newer ones. <br/> Can be set to `true` or `false`. | **No** | `true` |
 
 ### Required Secret Variables
 
